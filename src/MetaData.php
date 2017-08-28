@@ -2,7 +2,6 @@
 
 namespace Ngtfkx\Laradeck\CollectionMacros;
 
-
 class MetaData
 {
     public function version()
