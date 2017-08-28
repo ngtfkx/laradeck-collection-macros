@@ -11,6 +11,9 @@ if (!Collection::hasMacro('forSelect')) {
      * @return array
      */
     Collection::macro('forSelect', function ($valueName, $keyName = 'id') {
+        /**
+         * @var $this Collection
+         */
         return $this->pluck($valueName, $keyName)->toArray();
     });
 }
@@ -26,6 +29,9 @@ if (!Collection::hasMacro('forSelectWithPrepend')) {
      */
     Collection::macro('forSelectWithPrepend', function ($valueName, $keyName = 'id', $prepend = ['' => 'Выбрать'])
     {
+        /**
+         * @var $this Collection
+         */
         return $prepend + $this->forSelect($valueName, $keyName);
     });
 }
