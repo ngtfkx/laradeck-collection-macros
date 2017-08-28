@@ -42,6 +42,17 @@ $keyValueArray = $collect->forSelect('name')
 
 Аналогично `forSelect`, только в начало массива добавляютсся данные из массива `$prepend`
 
+**randomSafe (int $number = null): mixed**
+
+Аналог стадандртного метода random, но в случае если размер коллекции меньше
+запрашиваемого числа элементов не выкидывается ошибка, а возвращается столько элементов сколько есть в коллекции
+
+``` php
+$collect = new Collection([1, 2, 3]);
+$randoms = $collect->randomSafe(10);
+echo sizeof($randoms); // 3
+```
+
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
