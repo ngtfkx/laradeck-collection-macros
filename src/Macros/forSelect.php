@@ -27,8 +27,7 @@ if (!Collection::hasMacro('forSelectWithPrepend')) {
      * @param array $prepend Массив значений, которые должны быть добавлены в начало возвращаемого массива
      * @return array
      */
-    Collection::macro('forSelectWithPrepend', function ($valueName, $keyName = 'id', $prepend = ['' => 'Выбрать'])
-    {
+    Collection::macro('forSelectWithPrepend', function ($valueName, $keyName = 'id', $prepend = ['' => 'Выбрать']) {
         /**
          * @var $this Collection
          */
